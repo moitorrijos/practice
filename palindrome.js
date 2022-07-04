@@ -1,8 +1,3 @@
-/**
- * Checks if a word is a palindrome
- * @param {string} str - a word to check if is a palindrome
- * @returns {string}
- */
 function palindrome(str) {
   if (typeof str !== "string") throw new Error(`${str} must be a string.`)
   const reverseStr = str.split('').reverse().join('').toLowerCase()
