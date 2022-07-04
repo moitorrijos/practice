@@ -5,7 +5,7 @@
  */
 function palindrome(str) {
   if (typeof str !== "string") throw new Error(`${str} must be a string.`)
-  const reverseStr = strArray.reverse().join('').toLowerCase()
+  const reverseStr = str.split('').reverse().join('').toLowerCase()
   if (str.toLowerCase() === reverseStr) return `${str} is a palindrome.`
   return `${str} is not a palindrome.`
 }
