@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {string} str 
+ * @returns {string}
+ */
 function palindrome(str) {
   if (typeof str !== "string") throw new Error(`${str} must be a string.`)
   const reverseStr = str.split('').reverse().join('').toLowerCase()

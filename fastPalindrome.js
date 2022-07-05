@@ -1,3 +1,8 @@
+/**
+ * Checks if word is a palindrome recursively.
+ * @param {array} strArray 
+ * @returns {boolean}
+ */
 function checkPalindrome(strArray) {
   if (strArray[0] !== strArray[strArray.length - 1]) {
     return false
@@ -9,6 +14,11 @@ function checkPalindrome(strArray) {
   }
   return true
 }
+/**
+ * 
+ * @param {string} str 
+ * @returns {string}
+ */
 function fastPalindrome(str) {
   if (typeof str !== "string") throw new Error(`${str} must be a string.`)
   const strArray = str.toLowerCase().split('')
