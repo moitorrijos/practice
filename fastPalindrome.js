@@ -1,13 +1,13 @@
 function checkFirstLastChar(strArray) {
-  if (strArray[0] === strArray[strArray.length - 1]) {
-    strArray.shift()
-    strArray.pop()
-    if (strArray.length > 1) {
-      checkFirstLastChar(strArray)
-    }
-    return 'is a palindrome.'
+  if (strArray[0] !== strArray[strArray.length - 1]) {
+    return `is not a palindrome.`
   }
-  return `is not a palindrome.`
+  strArray.shift()
+  strArray.pop()
+  if (strArray.length > 1) {
+    checkFirstLastChar(strArray)
+  }
+  return 'is a palindrome.'
 }
 function fastPalindrome(str) {
   if (typeof str !== "string") throw new Error(`${str} must be a string.`)
